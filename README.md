@@ -1,6 +1,4 @@
-# [Your project title]
-
-> Solo project — brief description: [Brief description of what the project does]
+# Final Project Elec3
 
 ---
 
@@ -105,7 +103,7 @@ const WEATHER_API_KEY = "YOUR_API_KEY_HERE";
 ## Credits / API Attribution
 
 - Weather data provided by OpenWeatherMap — https://openweathermap.org/ (please follow their attribution requirements when required)
-- Project developed by: [Your Name]
+- Project developed by: Jeremy Untalan
 
 ## Notes for the Instructor
 
