@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="weather-wrapper">
+    <div class="weather-container">
+      <div class="weather-header">
+        <h1>Weather App</h1>
+      </div>
+
+      <div class="search-row">
+        <input
+          type="text"
+          id="location-input"
+          placeholder="Enter a city or province name"
+          autocomplete="off"
+        />
+        <button id="search-button" class="search-btn">Search</button>
+      </div>
+
+      <select id="location-selector" class="hide" aria-label="Choose location"></select>
+
+      <p id="loading-message" class="loading-status" aria-live="polite"></p>
+      <div id="error-display" class="error-message hide" role="alert"></div>
+
+      <div id="current-weather" class="weather-display hide">
+        <div class="weather-primary">
+          <div>
+            <h2 id="location-name"></h2>
+            <p id="location-country"></p>
+            <p id="weather-desc" class="weather-description"></p>
+          </div>
+
+          <div class="temperature-display">
+            <span id="temperature" class="temperature-value"></span>
+            <span class="unit-label">°C</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-item">
+            <span class="detail-label">Feels like</span>
+            <span id="feels-like-temp"></span> °C
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Humidity</span>
+            <span id="humidity-value"></span> %
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Wind</span>
+            <span id="wind-speed"></span> m/s
+          </div>
+        </div>
+      </div>
+
+      <div id="forecast-section" class="forecast-display hide">
+        <h3 class="forecast-header">5-Day Forecast</h3>
+        <div id="forecast-container" class="forecast-items"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="theme-toggle">
+        <label class="toggle">
+          <span class="toggle-text">Dark mode</span>
+          <input type="checkbox" id="theme-toggle" class="toggle-input" aria-label="Toggle dark mode" />
+          <span class="toggle-track" aria-hidden="true"><span class="toggle-knob"></span></span>
+        </label>
+      </div>
+
+      <p class="footer-note">© <span id="current-year"></span> Weather App — OpenWeatherApp</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

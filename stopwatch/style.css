@@ -1,0 +1,83 @@
+:root {
+  --surface-color: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --primary-text: rgba(255, 255, 255, 0.92);
+  --secondary-text: rgba(255, 255, 255, 0.6);
+  --box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  --border-radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--primary-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:
+    linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.stopwatch-wrapper {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.stopwatch-container {
+  width: min(520px, 100%);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(14px);
+  padding: 18px;
+}
+
+.stopwatch-title h1 { margin: 0; font-size: 20px; }
+
+.timer-display {
+  margin-top: 16px;
+  padding: 18px 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  background: rgba(0,0,0,0.22);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 750;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.action-buttons {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.action-btn {
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--primary-text);
+  padding: 12px 12px;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.12s ease, opacity 0.12s ease;
+}
+.action-btn:hover { background: rgba(255,255,255,0.10); }
+.action-btn:active { transform: translateY(1px) scale(0.99); }
+.action-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.action-start { background: rgba(34, 197, 94, 0.18); }
+.action-reset { background: rgba(239, 68, 68, 0.16); }

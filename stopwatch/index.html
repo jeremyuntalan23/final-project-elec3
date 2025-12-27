@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="stopwatch-wrapper">
+      <div class="stopwatch-container">
+        <div class="stopwatch-title">
+          <h1>Stopwatch</h1>
+        </div>
+
+        <div class="timer-display" id="timer-output" aria-live="polite">00:00:00.00</div>
+
+        <div class="action-buttons">
+          <button class="action-btn action-start" id="toggleBtn">Start</button>
+          <button class="action-btn action-reset" id="resetBtn" disabled>Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

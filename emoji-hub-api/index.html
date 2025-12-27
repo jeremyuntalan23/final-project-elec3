@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmojiHub Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🙂</div>
+        <div>
+          <h1>EmojiHub Explorer</h1>
+          <p class="muted">Search, filter, and save your favorite emojis</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">
+          🌙 <span class="btn-text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="row">
+          <div class="field grow">
+            <label for="searchInput">Search emoji name</label>
+            <div class="input-wrap">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="e.g., grinning face, cat, heart"
+                autocomplete="off"
+              />
+              <button id="searchBtn" class="btn btn-primary" type="button">Search</button>
+            </div>
+            <p class="help muted">Tip: try “cat”, “heart”, “smile”, “flag”.</p>
+          </div>
+
+          <div class="field">
+            <label for="categorySelect">Category</label>
+            <select id="categorySelect">
+              <option value="">Loading categories…</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="groupSelect">Group</label>
+            <select id="groupSelect">
+              <option value="">Loading groups…</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row actions">
+          <button id="randomBtn" class="btn" type="button">🎲 Random</button>
+          <button id="showFavoritesBtn" class="btn" type="button">⭐ Favorites</button>
+          <button id="clearBtn" class="btn btn-ghost" type="button">Clear</button>
+        </div>
+      </section>
+
+      <section class="status-area">
+        <div id="errorBox" class="error-box" role="alert" hidden></div>
+        <div class="meta">
+          <span id="resultsCount" class="muted"></span>
+        </div>
+      </section>
+
+      <section>
+        <div id="results" class="grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>
+        Data from EmojiHub API —
+        <a href="https://github.com/cheatsnake/emojihub" target="_blank" rel="noreferrer">credits/source</a>
+      </span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
